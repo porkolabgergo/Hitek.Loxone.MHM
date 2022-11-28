@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hitek.Loxone.MHM.Blazor", "Hitek.Loxone.MHM.Blazor\Hitek.Loxone.MHM.Blazor.csproj", "{B21FA2BD-2C16-4B7D-9178-4BE7DE5B4696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hitek.Loxone.MHM.WebAPI", "Hitek.Loxone.MHM.WebAPI\Hitek.Loxone.MHM.WebAPI.csproj", "{E6E1ABD2-2E2D-4C4A-8294-31C5B46B4C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hitek.Loxone.MHM.Shared", "Hitek.Loxone.MHM.Shared\Hitek.Loxone.MHM.Shared.csproj", "{ECD3247F-4307-4BEF-A686-A7D04DA41974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B21FA2BD-2C16-4B7D-9178-4BE7DE5B4696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21FA2BD-2C16-4B7D-9178-4BE7DE5B4696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21FA2BD-2C16-4B7D-9178-4BE7DE5B4696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21FA2BD-2C16-4B7D-9178-4BE7DE5B4696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6E1ABD2-2E2D-4C4A-8294-31C5B46B4C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E1ABD2-2E2D-4C4A-8294-31C5B46B4C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E1ABD2-2E2D-4C4A-8294-31C5B46B4C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E1ABD2-2E2D-4C4A-8294-31C5B46B4C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD3247F-4307-4BEF-A686-A7D04DA41974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD3247F-4307-4BEF-A686-A7D04DA41974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD3247F-4307-4BEF-A686-A7D04DA41974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD3247F-4307-4BEF-A686-A7D04DA41974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
