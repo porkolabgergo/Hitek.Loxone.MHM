@@ -18,6 +18,46 @@ public class EmployeeRepository
         {
             //TODO : Log exception
         }
+        return null;
+    }
+
+    public void AddEmployee(Employee e)
+    {
+        try
+        {
+            db.Employees.Add(e);
+            db.SaveChanges();
+        }
+        catch
+        {
+            //TODO: Log exception
+        }
     }
     
+    public void UpdateEmployee(Employee e)
+    {
+        try
+        {
+            db.Entry(e).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+        catch
+        {
+            //TODO: Log exception
+        }
+    }
+
+    public void DeleteEmployee(string id)
+    {
+        try
+        {
+            Employee e = db.Employees.Find(id);
+            db.Employees.Remove(e);
+            db.SaveChanges();
+        }
+        catch
+        {
+            //TODO: Log exception
+        }
+    }
 }

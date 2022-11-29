@@ -1,0 +1,26 @@
+<div class="card p-1 m-2" style="cursor: @Cursor;">
+    <div class="card-header text-start">
+        @HeaderText
+    </div>
+    @ChildContent
+    <div class="card-footer">
+        @FooterText
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string HeaderText { get; set; }
+
+    [Parameter]
+    public string FooterText { get; set; }
+    
+    [Parameter]
+    public string Cursor { get; set; }
+
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+}

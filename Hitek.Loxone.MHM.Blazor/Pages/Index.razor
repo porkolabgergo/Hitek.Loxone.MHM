@@ -1,9 +1,61 @@
 ﻿@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Hitek.Loxone.MHM.Blazor.Components
+@using Hitek.Loxone.MHM.Shared.Models
+<PageTitle>Home</PageTitle>
 
-<PageTitle>Index</PageTitle>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="container-fluid">
+                <h2>General</h2>
+                <div class="row">
+                    <HitekCard HeaderText="Terminal Status" Cursor="default">
+                        <p style="color:lawngreen" class="mx-3">Online</p>
+                    </HitekCard>
+                    <HitekCard HeaderText="Employees Total" Cursor="default">
+                        <p style="color:white; font-size: 36px; font-weight: 700" class="mx-3">28</p>
+                    </HitekCard>
+                    <HitekCard HeaderText="Employees in Office" Cursor="default">
+                        <p style="color:white; font-size: 36px; font-weight: 700" class="mx-3">14</p>
+                    </HitekCard>
+                </div>
+            </div>
+            <br/>
+            <div class="container-fluid">
+                <h2>Reports</h2>
+                <div class="row">
+                    <HitekCard HeaderText="Monthly Report" Cursor="pointer" />
+                    <HitekCard HeaderText="Report per Employee" Cursor="pointer"/>
+                    <HitekCard HeaderText="Custom Interval Report" Cursor="pointer"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <h2>Activity Log</h2>
 
-<h1>Hello, world!</h1>
+            <SfGrid TValue="Employee" AllowPaging="true">
+                <SfDataManager Url="http://localhost:5195/Employee" Adaptor="Adaptors.WebApiAdaptor"/>
+                <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Dialog"/>
+                <GridColumns>
+                    <GridColumn Field="EmployeeID" HeaderText="ID" IsPrimaryKey="true" IsIdentity="true" Width="90"/>
+                    <GridColumn Field="Vorname" HeaderText="Vorname" Width="90"/>
+                    <GridColumn Field="Nachname" HeaderText="Nachname" Width="90"/>
+                </GridColumns>
+            </SfGrid>
+        </div>
+    </div>
+</div>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?"/>
+<style> 
+    .e-grid .e-headercell { 
+        background-color: black; 
+    } 
+  
+    .e-headercell {         
+        color: white; 
+        font-size: 2rem; 
+        font-weight: bold; 
+    } 
+</style>
