@@ -1,0 +1,23 @@
+.e-grid .e-headercell {
+    background-color: black;
+}
+
+.e-headercell {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+} 
+
+p.status-online{
+    color: lawngreen;
+}
+
+p.status-offline{
+    color: red;
+}
+
+p.dashboard-number{
+    color:white;
+    font-size: 36px;
+    font-weight: 700;
+}

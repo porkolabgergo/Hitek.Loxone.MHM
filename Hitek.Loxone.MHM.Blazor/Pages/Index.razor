@@ -12,13 +12,13 @@
                 <h2>General</h2>
                 <div class="row">
                     <HitekCard HeaderText="Terminal Status" Cursor="default">
-                        <p style="color:lawngreen" class="mx-3">Online</p>
+                        <p class="status-online mx-3">Online</p>
                     </HitekCard>
                     <HitekCard HeaderText="Employees Total" Cursor="default">
-                        <p style="color:white; font-size: 36px; font-weight: 700" class="mx-3">28</p>
+                        <p class="dashboard-number mx-3">28</p>
                     </HitekCard>
                     <HitekCard HeaderText="Employees in Office" Cursor="default">
-                        <p style="color:white; font-size: 36px; font-weight: 700" class="mx-3">14</p>
+                        <p class="dashboard-number mx-3">14</p>
                     </HitekCard>
                 </div>
             </div>
@@ -35,27 +35,14 @@
         <div class="col-md-12 col-lg-6">
             <h2>Activity Log</h2>
 
-            <SfGrid TValue="Employee" AllowPaging="true">
-                <SfDataManager Url="http://localhost:5195/Employee" Adaptor="Adaptors.WebApiAdaptor"/>
-                <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Dialog"/>
+            <SfGrid TValue="LogRecord" AllowPaging="true">
+                <SfDataManager Url="http://localhost:5195/LogRecord" Adaptor="Adaptors.WebApiAdaptor"/>
                 <GridColumns>
-                    <GridColumn Field="EmployeeID" HeaderText="ID" IsPrimaryKey="true" IsIdentity="true" Width="90"/>
-                    <GridColumn Field="Vorname" HeaderText="Vorname" Width="90"/>
-                    <GridColumn Field="Nachname" HeaderText="Nachname" Width="90"/>
+                    <GridColumn Field="Employee" HeaderText="Employee" IsPrimaryKey="true" IsIdentity="true" Width="90"/>
+                    <GridColumn Field="Date" HeaderText="Date" Width="90"/>
+                    <GridColumn Field="LogType" HeaderText="Action" Width="90"/>
                 </GridColumns>
             </SfGrid>
         </div>
     </div>
 </div>
-
-<style> 
-    .e-grid .e-headercell { 
-        background-color: black; 
-    } 
-  
-    .e-headercell {         
-        color: white; 
-        font-size: 2rem; 
-        font-weight: bold; 
-    } 
-</style>
