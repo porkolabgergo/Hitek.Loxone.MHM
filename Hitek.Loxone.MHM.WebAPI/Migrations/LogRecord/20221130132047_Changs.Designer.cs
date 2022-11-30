@@ -4,6 +4,7 @@ using Hitek.Loxone.MHM.WebAPI.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hitek.Loxone.MHM.WebAPI.Migrations.LogRecord
 {
     [DbContext(typeof(LogRecordContext))]
-    partial class LogRecordContextModelSnapshot : ModelSnapshot
+    [Migration("20221130132047_Changs")]
+    partial class Changs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

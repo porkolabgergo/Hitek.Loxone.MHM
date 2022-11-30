@@ -14,11 +14,16 @@ public class EmployeeRepository
         {
             return db.Employees;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             //TODO : Log exception
         }
         return null;
+    }
+
+    public Employee GetEmployee(string id)
+    {
+        return db.Employees.Where(x => x.EmployeeID == id).FirstOrDefault();
     }
 
     public void AddEmployee(Employee e)

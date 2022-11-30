@@ -8,4 +8,5 @@ public class Employee
     public string? EmployeeID { get; set; }
     public string? Vorname { get; set; }
     public string? Nachname { get; set; }
+    public bool IsCheckedIn { get; set; }
 }

@@ -1,5 +1,4 @@
 using Hitek.Loxone.MHM.Shared.Models;
-using Hitek.Loxone.MHM.WebAPI.Controllers;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hitek.Loxone.MHM.WebAPI.Context;

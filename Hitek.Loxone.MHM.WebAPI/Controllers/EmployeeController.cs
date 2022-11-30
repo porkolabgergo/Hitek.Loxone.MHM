@@ -6,7 +6,7 @@ using Microsoft.Extensions.Primitives;
 namespace Hitek.Loxone.MHM.WebAPI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class EmployeeController : Controller
 {
     private readonly ILogger<EmployeeController> _logger;

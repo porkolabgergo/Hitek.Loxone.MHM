@@ -8,6 +8,6 @@ public class LogRecord
     [Key]
     public Guid Id { get; set; }
     public LogType LogType { get; set; }
-    public Employee? Employee { get; set; }
+    public string? EmployeeID { get; set; }
     public DateTime Date { get; set; }
 }

@@ -14,7 +14,7 @@ public class LogRecordRepository
         {
             return db.LogRecords;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             //TODO : Log exception
         }
