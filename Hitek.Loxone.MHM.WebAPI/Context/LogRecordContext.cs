@@ -11,7 +11,8 @@ public class LogRecordContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Hitek.Loxone;User Id=sqladmin;Password=Wuv1ac2aT;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Hitek.Loxone;User Id=sqladmin;Password=Wuv1ac2aT;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=tcp:hitekloxone.database.windows.net,1433;Initial Catalog=hitekloxone;Persist Security Info=False;User ID=loxoneadmin;Password=HIges2001;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }
