@@ -17,6 +17,7 @@
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
+        <PackageReference Include="Syncfusion.Blazor.Buttons" Version="20.3.0.59" />
         <PackageReference Include="Syncfusion.Blazor.Data" Version="20.3.0.58" />
         <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.3.0.58" />
         <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.3.0.58" />

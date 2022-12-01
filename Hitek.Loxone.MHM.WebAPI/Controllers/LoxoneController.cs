@@ -34,6 +34,7 @@ namespace Hitek.Loxone.MHM.WebAPI.Controllers
                 Date = DateTime.Now,
                 EmployeeID = resp.LL.value
             });
+            Debug.Print($"Code for User [{resp.LL.value}] entered!");
         }
     }
 }

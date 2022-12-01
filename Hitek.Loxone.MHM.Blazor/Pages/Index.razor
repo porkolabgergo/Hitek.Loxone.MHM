@@ -12,7 +12,7 @@
                 <h2>General</h2>
                 <div class="row">
                     <HitekCard HeaderText="Terminal Status" Cursor="default">
-                        <p class="status-online mx-3">Online</p>
+                        <p class="text-success mx-3">Online</p>
                     </HitekCard>
                     <HitekCard HeaderText="Employees Total" Cursor="default">
                         <p class="dashboard-number mx-3">28</p>
@@ -22,25 +22,44 @@
                     </HitekCard>
                 </div>
             </div>
-            <br/>
+            <br />
             <div class="container-fluid">
                 <h2>Reports</h2>
                 <div class="row">
                     <HitekCard HeaderText="Monthly Report" Cursor="pointer" />
-                    <HitekCard HeaderText="Report per Employee" Cursor="pointer"/>
-                    <HitekCard HeaderText="Custom Interval Report" Cursor="pointer"/>
+                    <HitekCard HeaderText="Report per Employee" Cursor="pointer" />
+                    <HitekCard HeaderText="Custom Interval Report" Cursor="pointer" />
                 </div>
             </div>
         </div>
         <div class="col-md-12 col-lg-6">
             <h2>Activity Log</h2>
 
-            <SfGrid TValue="LogRecord" AllowPaging="true">
-                <SfDataManager Url="http://localhost:5195/LogRecord" Adaptor="Adaptors.WebApiAdaptor"/>
+            <SfGrid TValue="LogRecord" AllowPaging="true" AllowSorting="true">
+                <SfDataManager Url="http://localhost:5195/api/LogRecord" Adaptor="Adaptors.WebApiAdaptor" />
+                <GridSortSettings>
+                    <GridSortColumns>
+                        <GridSortColumn Field="Date" Direction="SortDirection.Ascending"></GridSortColumn>
+                    </GridSortColumns>
+                </GridSortSettings>
                 <GridColumns>
-                    <GridColumn Field="Employee" HeaderText="Employee" IsPrimaryKey="true" IsIdentity="true" Width="90"/>
-                    <GridColumn Field="Date" HeaderText="Date" Width="90"/>
-                    <GridColumn Field="LogType" HeaderText="Action" Width="90"/>
+                    <GridColumn Field="Id" HeaderText="LogID" Visible="false" IsPrimaryKey="true" IsIdentity="true" Width="90" />
+                    <GridColumn Field="EmployeeID" HeaderText="Employee" Width="90" />
+                    <GridColumn Field="Date" Type="ColumnType.Date" HeaderText="Date" Width="90" />
+                    @*<GridColumn Field="LogType" HeaderText="Action" Width="90" />*@
+                    <GridColumn Field="LogType" HeaderText="Action" Width="90">
+                        <Template>
+                            @{
+                                var log = (context as LogRecord);
+                                var css = log.LogType == MHM.Shared.Enums.LogType.In ? "e-success" : "e-danger";
+                                <SfChip>
+                                    <ChipItems>
+                                        <ChipItem Text="@log?.LogType.ToString()" CssClass="@css" />
+                                    </ChipItems>
+                                </SfChip>
+                            }
+                        </Template>
+                    </GridColumn>
                 </GridColumns>
             </SfGrid>
         </div>
